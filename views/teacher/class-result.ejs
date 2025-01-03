@@ -1,0 +1,45 @@
+<% flag=1;%> 
+<% flagHome=1;%> 
+<% flagHomestudent=0;%>
+<%- include("../includes/head.ejs") %>
+<head>
+  <link rel="stylesheet" href="/css/style_all_std_2.css" />
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="flex-box">
+        <div class="flex-heading">
+            <h1>List of all student</h1>
+        </div>
+        <div class="table-box">
+            <table border="black">
+                <thead>
+                    <tr>
+                        <th class="sno-col">SNo</th>
+                        <th class="id-col">ID</th>
+                        <th class="name-col">Name</th>
+                        <th class="view-col">Show Result</th>
+                        <th class="view-col">Add Result</th>
+                        <th class="photo-col">Photo</th>
+                    </tr>
+                </thead> 
+
+                <tbody>
+                    <% for(let i=0;i<10;i++){ %>
+                        <tr>
+                            <td><%=i+1;%></td>
+                            <td>BT23CSE00<%=i+1%></td>
+                            <td class="name">Random</td>
+                            <td><a href="http://localhost:8080/teacher/result/classresult/studentresult">View Result</a></td>
+                            <td><a href="http://localhost:8080/teacher/result/classresult/studentresult">Add Result</a></td>
+                            <td><div class="photo"></div></td>
+                        </tr>
+
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

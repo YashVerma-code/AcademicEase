@@ -1,0 +1,38 @@
+<% flag=1;%>
+<% flagHome=1;%>
+<%flagViewAttn=0;%>
+<% flagHomestudent=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/style_attn_view.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content">
+        <div class="heading">
+            <h2>VIEW ATTENDENCE</h2>
+        </div>
+        <div class="table-box">
+            <table border="black">
+                <thead>
+                    <tr>
+                        <th class="sno-col">SNO</th>
+                        <th class="date-col">DATE</th>
+                        <th class="link-col">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0;i<15;i++){%>
+                    <tr>
+                        <td>1</td>
+                        <td>23/10/2023</td>
+                        <td><a href="http://localhost:8080/teacher/attendence/attendence_sheet_view/date">View</a></td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

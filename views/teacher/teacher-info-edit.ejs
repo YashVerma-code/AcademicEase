@@ -1,0 +1,86 @@
+<%flag=1%>
+<%flagHome=1%>
+<%flagViewAttn=0%>
+<%flagHomestudent=0%>
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="css/style_register_pg_tr.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content">
+        <% if(success==1){%>
+        <div class="form-message">
+            <div class="form-message-content">
+                <div class="message"><h3>Successfully Added the data to DataBase!</h3></div>
+                <div class="close-btn">
+                    <button>X</button>
+                </div>
+            </div>
+        </div>
+        <%}%>       
+        <div class="nav-heading">
+            <h1>Faculty Registeration Form</h1>
+        </div>
+        <div class="tr-register-container">
+            <form>
+                <div class="mb-2">
+                    <label for="tname"><span>Name:</span> </label><br>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="tname" name="tname" value="<%=teacher.teacherName%>" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="user" ><span>Username:</span> </label>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="user" name="user" value="<%=teacher.userid%>" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="tdob" ><span>Date Of Birth</span></label>
+                    <div class="input-box">
+                        <input type="date" class="inp-len" id="tdob" name="tdob" pattern="\d{4}-\d{2}-\d{2}" required value="<%=teacher.dob%>" autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label  for="temail"><span>Email :</span></label>
+                    <div class="input-box">
+                        <input type="email" class="inp-len" id="temail" value="<%=teacher.temail%>" name="temail" required autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="gen" ><span>Gender :</span></label>&nbsp;
+                    <div class="inp-radio">
+                        <input type="radio" name="gen" id="Female" value="Female"><label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gen" id="male" value="Male" ><label for="male">Male</label>
+                    </div>
+                </div>
+                <div class="mb-2 mr-top">
+                    <label for="qualification"><span>Qualification :</span></label>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="qualification" name="qualification" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="tcontact">Contact: </label>
+                    <div class="input-box">
+                        <input type="number" class="inp-len" id="tcontact" name="tcontact" maxlegth="10" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="taddress">Address: </label>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="taddress" name="taddress" required autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="btn-box">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/add-tr-app.js"></script>
+</body>
+</html>

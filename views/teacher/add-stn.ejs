@@ -1,0 +1,107 @@
+<% flag=1;%>
+<% flagHome=1;%>
+<% flagHomestudent=0;%>
+<%flagViewAttn=0;%>
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/style_register_pg_tr.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content">
+        <div class="nav-heading">
+            <h1>Student Registration Form</h1>
+        </div>
+        <div class="tr-register-container">
+            <form action="http://localhost:8080/teacher/addStudent" method="post">
+                <div class="mb-2">
+                    <label for="stuname"><span>Student Name:</span> </label><br>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="stuname" name="stuname" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="user" ><span>Username:</span> </label>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="user" name="user" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="pass" ><span>Password :</span></label>
+                    <div class="input-box">
+                        <input type="password" class="inp-len" id="pass" name="pass" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="cpass"><span>Confirm Password</span></label>
+                    <div class="input-box">
+                        <input type="password" class="inp-len" id="cpass" name="cpass" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="studob" ><span>Date Of Birth</span></label>
+                    <div class="input-box">
+                        <input type="date" class="inp-len" id="studob" name="studob" pattern="\d{4}-\d{2}-\d{2}" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="stuemail"><span>Email :</span></label>
+                    <div class="input-box">
+                        <input type="email" class="inp-len" id="stuemail" name="stuemail" required autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="gen" ><span>Gender :</span></label>&nbsp;
+                    <div class="inp-radio">
+                        <input type="radio" name="gen" id="Female" value="Female"><label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gen" id="male" value="Male" ><label for="male">Male</label>
+                    </div>
+                </div>
+                <div class="mb-2 mr-top">
+                    <label for="branch"><span>Branch:</span></label>
+                    <div class="input-box">
+                        <select name="branch" required id="branch">
+                            <option value="none">Select Branch</option>
+                            <option value="CSE">CSE</option>
+                            <option value="AIML">AI ML</option>
+                            <option value="DSA">DSA</option>
+                            <option value="HCIGT">HCIGT</option>
+                            <option value="ECE">ECE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-2 mr-top">
+                    <label for="section"><span>Section:</span></label>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="section" name="section" required autocomplete="off" placeholder="A/B/C/D"/>
+                    </div>
+                </div>
+                <div class="mb-2 mr-top">
+                    <label for="semester"><span>Semester:</span></label>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="semester" name="semester" required autocomplete="off" placeholder="1/2/3/4/5/6/7/8"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="stucontact">Contact: </label>
+                    <div class="input-box">
+                        <input type="number" class="inp-len" id="stucontact" name="stucontact" maxlegth="10" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="stuaddress">Address: </label>
+                    <div class="input-box">
+                        <input type="text" class="inp-len" id="stuaddress" name="stuaddress" required autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="btn-box">
+                        <button type="submit" class="btn-add-student">Add Student Data</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/add-tr-app.js"></script>
+</body>
+</html>

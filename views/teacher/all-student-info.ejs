@@ -1,0 +1,68 @@
+<% flag=1;%> 
+<% flagHome=1;%> 
+<% flagHomestudent=0;%>
+<%flagViewAttn=0%>
+<%- include("../includes/head.ejs") %>
+<head>
+  <link rel="stylesheet" href="/css/style_all_std_2.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="flex-box">
+        <div class="flex-heading">
+            <h1>List of all student</h1>
+        </div>
+        <div class="table-box">
+            <table border="black">
+                <thead>
+                    <tr>
+                        <th class="sno-col">sno</th>
+                        <th class="id-col">ID</th>
+                        <th class="name-col">Name</th>
+                        <th class="view-col">Show Profile</th>
+                        <th class="btn-col">Delete</th>
+                        <th class="photo-col">Photo</th>
+                    </tr>
+                </thead> 
+
+                <tbody>
+                    <%let i=0;%>
+                    <% for(let studn of allStudns){ %>
+                        <tr>
+                            <td><%=i=i+1;%></td>
+                            <td><%=studn.userid%></td>
+                            <td class="name"><%=studn.studentName%></td>
+                            <td>
+                                <a href="http://localhost:8080/teacher/allstudent/allstudentinfo/<%=studn.userid%>">View Profile</a>
+                            </td>
+                            <td>
+                                <div class="del-btn-box">
+                                    <form action="/allstudent/allstudentinfo/<%= studn.userid %>?_method=DELETE" method="POST">
+                                        <button class="del-btn" onclick="showToast()">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
+                            <td><div class="photo"></div></td>
+                        </tr>
+
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    function showToast(){
+    Toastify({
+      text: "This is a delayed toast message!",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+    }).showToast();
+    }
+  </script>
+</body>
+</html>

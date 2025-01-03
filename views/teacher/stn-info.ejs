@@ -1,0 +1,57 @@
+<% flag=1;%>
+<% flagHome=1;%>
+<%flagViewAttn=0;%>
+<% flagHomestudent=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/style_attn_view.css">
+    <link rel="stylesheet" href="/css/teacher-info.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content">
+        <div class="heading">
+            <h2 style="font-size: 50px;">Student Id : <%=student.userid%></h2>
+        </div>
+        <div class="faculty-info-box">
+            <div class="tr-info">
+                <div class="mb-2">
+                   <h2>Name : <%=student.studentName %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Semester :<%=student.Semester%></h2>
+                </div>
+                 <div class="mb-2">
+                    <h2>Branch : <%=student.Branch%></h2>
+                </div>
+                 <div class="mb-2">
+                    <h2>Section : <%=student.Section%></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Date Of Birth : <%=student.dob.toString().split(" ").slice(1,4).join(" ") %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Gender : <%=student.gender %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Email : <%=student.stuemail %></h2>
+                </div>
+                <div class="mb-2 ">
+                    <h2>Contact : <%=student.contact %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Address : <%=student.Address %></h2>
+                </div>
+                <div class="mb-2">
+                    <div class="btn-box">
+                        <button type="submit" class="btn">Edit</button>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <div class="photo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

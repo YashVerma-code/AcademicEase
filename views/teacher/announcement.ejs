@@ -1,0 +1,59 @@
+<% flag=1;%>
+<% flagHome=1;%>
+<%flagViewAttn=0;%>
+<% flagHomestudent=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+  <link rel="stylesheet" href="/css/style_announcement.css" />
+</head>
+<body>
+  <%- include("../includes/flash.ejs")%>
+  <div class="body-content">
+    <div class="heading">
+      <h2>ADD ANNOUNCEMENT</h2>
+    </div>
+    <div class="add-announcement">
+      <form action="http://localhost:8080/teacher/announcement" method="post">
+        <div class="mb-3">
+          <label for="announcement" class="form-label">
+            <h2><b>Announcement</b></h2>
+          </label>
+
+          <div class="responsive-textarea">
+            <textarea class="form-control" id="announcement" name="announcement" style="font-size: 20px;"></textarea>
+          </div>
+        </div>
+        <div class="add-announcement-btn">
+          <button type="submit" class="btn">Add announcement</button>
+        </div>
+      </form>
+    </div>
+    <div class="all-announcement">
+      <table class="table" id="myTable" style="color: white" border="black">
+        <thead>
+          <tr>
+            <th class="sno-col" >SNo</th>
+            <th class="date-col">Date of assign</th>
+            <th >Announcement</th>
+            <th  class="btn-col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% let i=1;%>
+            <% for(let msg of announcements){%>
+          <tr>
+            <td style="text-align: center;"><%=i%></td>
+            <td style="text-align: center;"><%=new Date(msg.date).toDateString() %></td>
+            <td class="announc-col"><%=msg.announcement%></td>
+            <form action="/announcement/<%=msg._id%>/?_method=DELETE" method="post">
+              <td style="text-align: center;"><button class="btn-2">Delete</button></td>
+            </form>
+          </tr>
+          <%i++;%>
+          <% }%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

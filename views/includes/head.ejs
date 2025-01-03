@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Site</title>
+    <link rel="icon" href="/img/logo-web.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>  
+    <div class="top-part-design">
+        <div class="black-top-box">
+            <div class="flex-box-top">
+                <span class="iiitn-logo"></span>
+                <span class="college-name">
+                    <h5>IIIT Nagpur AcademicEase</h5></span>
+            </div>
+            <div class="curr-time">
+                <span class="time-text">Current system time :</span>
+                <span class="time"></span>
+            </div>
+        </div>
+        <div class="white-top-box">
+            <%  if(flag==1){%>
+                <div class="logout-box">
+                    <div class="logout"><a href="http://localhost:8080">Logout</a></div>
+                    <div class="logout-icon"></div>
+                </div>
+                <%}%>
+            <% if(flagHome==1){%> 
+                <div class="home-box">
+                    <div class="home"><a href="http://localhost:8080/teacher">Home</a></div>
+                </div>
+            <%}%> 
+             <% if(flagViewAttn==1){%> 
+                <div class="attn-box">
+                    <div class="view-att"><a href="http://localhost:8080/teacher/attendence/attendence_sheet_view">View Attendence</a></div>
+                </div>
+            <%}%> 
+             <% if(flagHomestudent==1){%> 
+                <div class="home-box">
+                    <div class="home"><a href="http://localhost:8080/student">Home</a></div>
+                </div>
+            <%}%>    
+        </div>
+    </div>
+    <script src="/js/time.js"></script>
+
+</body>

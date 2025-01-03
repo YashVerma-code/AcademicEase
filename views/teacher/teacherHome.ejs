@@ -1,0 +1,51 @@
+<% flag=1;%>
+<% flagHome=0;%>
+<%flagViewAttn=0;%>
+<% flagHomestudent=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/styleTeacher.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content-home">
+        <div class="options-box">
+
+            <div class="options-list">
+                <a href="http://localhost:8080/teacher/allstudent">View all student</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/teacher/announcement">Announcement</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/teacher/attendence">Attendence</a>
+            </div>
+
+            <div class="options-list">
+                <!-- <a href="http://localhost:8080/teacher//information">Information</a> -->
+                <a href="http://localhost:8080/teacher//information">Information</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/teacher/student_list" download="student list">Download Student list</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/teacher/result">Student Result</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/teacher/addStudent">Add Student</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/">Log Out</a>
+            </div>
+        </div>
+    </div>  
+
+</body>
+</html>

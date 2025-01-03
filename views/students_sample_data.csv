@@ -1,0 +1,11 @@
+studentName,userid,password,dob,stuemail,gender,Branch,Section,Semester,contact,Address
+JOHN DOE,john.doe123,password123,1990-01-15,john.doe@example.com,Male,Computer Science,A,6,1234567890,123 Main St
+JANE SMITH,jane.smith456,password456,1992-05-23,jane.smith@example.com,Female,Mechanical Engineering,B,4,2345678901,456 Elm St
+MICHAEL BROWN,michael.brown789,password789,1991-03-30,michael.brown@example.com,Male,Electrical Engineering,C,5,3456789012,789 Oak St
+EMILY DAVIS,emily.davis012,password012,1993-07-14,emily.davis@example.com,Female,Civil Engineering,D,3,4567890123,101 Pine St
+DAVID WILSON,david.wilson345,password345,1989-09-10,david.wilson@example.com,Male,Chemical Engineering,E,7,5678901234,202 Cedar St
+SARAH MILLER,sarah.miller678,password678,1994-02-20,sarah.miller@example.com,Female,Biotechnology,F,2,6789012345,303 Birch St
+JAMES MARTINEZ,james.martinez901,password901,1990-12-01,james.martinez@example.com,Male,Information Technology,G,8,7890123456,404 Maple St
+AMANDA GARCIA,amanda.garcia234,password234,1991-06-05,amanda.garcia@example.com,Female,Aerospace Engineering,H,1,8901234567,505 Spruce St
+ROBERT LEE,robert.lee567,password567,1988-04-18,robert.lee@example.com,Male,Automobile Engineering,I,6,9012345678,606 Redwood St
+LINDA WHITE,linda.white890,password890,1992-11-11,linda.white@example.com,Female,Environmental Engineering,J,3,0123456789,707 Willow St

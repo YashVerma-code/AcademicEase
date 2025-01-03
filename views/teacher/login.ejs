@@ -1,0 +1,80 @@
+<%flag=0;%>
+<%flagViewAttn=0;%>
+<%flagHome=0;%>
+<% flagHomestudent=0;%>
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/styleLogin.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="form-box">
+        <div class="form">
+            <div class="form-login-options">
+                <div class="teacher-login-div trLogin">
+                    <span>Teacher</span>
+                </div>
+                <div class="student-login-div bg-active stnLogin" >
+                    <span>Student</span>
+                </div>
+            </div>
+            <div class="login-stn">
+                <form action="http://localhost:8080/student" method="post">
+                    <div class="login-heading">
+                        <h2>Student Login</h2>
+                    </div>
+                    <div class="user">
+                        <label for="user"><h2>Student Usernaxme</h2></label>
+                        <input type="text" name="userid" id="user" placeholder="Username">
+                    </div>
+                    <div class="pass">
+                        <label for="pass"><h2>Password</h2></label>
+                        <input type="password" name="password" id="pass" placeholder="Password">
+                    </div> 
+                    <div class="pass">
+                        <label for="branch"><h2>Branch</h2></label>
+                        <input type="text" name="branch" id="branch" placeholder="CSE/ECE/AIML/DSA/IOT">
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn-pushable" role="button">
+                            <span class="btn-shadow"></span>
+                            <span class="btn-edge"></span>
+                            <span class="btn-front text">Login In</span>
+                          </button>
+                    </div>
+                </form> 
+            </div>
+            <div class="login-tr Deactive">
+                <form action="http://localhost:8080/teacher" method="post">
+                    <div class="login-heading">
+                        <h2>Teacher Login</h2>
+                    </div>
+                    <div class="user">
+                        <label for="username"><h2>Teacher Username</h2></label>
+                        <input type="text" name="username" id="username" placeholder="Username">
+                    </div>
+                    <div class="pass">
+                        <label for="password"><h2>Password</h2></label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="sign-up">
+                        <h2>
+                            <a href="http://localhost:8080/registerteacher">Register <div class="reg-img"></div>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn-pushable" role="button">
+                            <span class="btn-shadow"></span>
+                            <span class="btn-edge"></span>
+                            <span class="btn-front text">Login In</span>
+                          </button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

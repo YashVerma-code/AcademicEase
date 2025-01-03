@@ -1,0 +1,47 @@
+.body-content-home{
+    height: 65vh;
+    width: 100%;
+    position: relative;
+    top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid yellow; */
+}
+
+.options-box{
+    height: 70%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 2px solid yellow; */
+    /* background: #fffefe; */
+    
+}
+.options-list{
+    height: 25%;
+    width: 40%;
+    font-size: 26px;
+    background-color: #1d1c1c;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* border-radius: 4px; */
+}
+.options-list:hover{
+    background-color: #373535;
+}
+.options-list a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    /* border: 1px solid rgb(255, 250, 250); */
+}

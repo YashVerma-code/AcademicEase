@@ -1,0 +1,233 @@
+.form-message{
+    height: 12%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+    /* background: #000; */
+    
+}
+.form-message-content{
+    height: 100%;
+    width: 85%;
+    border-radius: 10px;
+    background: rgb(61, 194, 61);
+    border: 1px solid darkgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.message{
+    height: 100%;
+    width: 75%;
+    display: grid;
+    place-items: center;
+    padding-left: 15px;
+}
+.message h3{
+    padding-left: 20px;
+    width: 100%;
+    color: rgb(213, 227, 212);
+    font-size: 25px;
+    line-height: 40px;
+    /* background: #ddcece; */
+}
+.form-message-content .close-btn{
+    height:65%;
+    width: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+    /* background: #874d4d; */
+}
+.form-message-content .close-btn button{
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 30px;
+}
+.form-message-content .close-btn button:hover{
+    transform: scale(1.3);
+}
+
+.none{
+    display:none;
+}
+
+.register-container{
+    height: 65%;
+    width: 100%;
+    position: relative;
+    top:17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* background: #ffffff; */
+
+}
+.regis-status{
+    width: 100%;
+    height: 9%;
+    background: #ffffff;
+}
+.nav-heading{
+    width: 100%;
+    height: 9%;
+    position: relative;
+    /* margin-bottom: 15px; */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.nav-heading h1{
+    text-align: center;
+    color:#FF4742;
+    font-size: 40px;
+    font-weight:900;
+    word-spacing:15px;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px rgb(255, 249, 249);
+    
+}
+.tr-register-container{
+    height:100%;
+    width: 65%;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius:15px ;
+    
+    /* background: #ffffffcb; */
+    /* overflow-y: scroll; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .tr-register-container::-webkit-scrollbar{
+    width: 12px;
+    }
+    .tr-register-container::-webkit-scrollbar-thumb{
+        background:#FF4742;  
+        border-radius: 20px; 
+        }
+        .tr-register-container::-webkit-scrollbar-track{
+            background: grey;
+            border-radius: 20px;  
+            } */
+            
+.tr-register-container form{
+    height: 100%;
+    width: 80%;
+    /* height: 525px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px grey;
+    /* background: #ffffffcb; */
+    /* border: 1px solid rgb(238, 24, 24); */
+}
+.mb-2{
+    margin-top: 20px;
+    width: 90%;
+    height: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+.mb-2 label{
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    padding-left: 10px;
+    /* border: 1px solid rgb(0, 255, 60); */
+    
+}
+.mb-2 .inp-radio{
+    width: 100%;
+    height: 40%;
+    padding-left: 20px;
+    /* border: 1px solid rgb(0, 60, 255); */
+}
+.mb-2 .inp-radio input{
+    accent-color: rgb(15, 132, 40);
+}
+.input-box{
+    width: 95%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-box select{
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    /* border: 1px solid rgb(0, 200, 255); */
+
+}
+.mb-2 .inp-len{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 20px;
+    color:darkslateblue;
+    font-weight: 700;
+}
+.mb-2 .btn-box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #FF4742; */
+}
+
+.mb-2 .btn-box button{
+    height: 50%;
+    width: 35%;
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+
+}
+.mb-2 .btn-box button:hover,
+.mb-2 .btn-box button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.mb-2 .btn-box button:active {
+  opacity: .5;
+}
+.mr-top{
+    margin-top: 35px;
+}

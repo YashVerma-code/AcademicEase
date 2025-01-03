@@ -1,0 +1,53 @@
+<% flag=1;%>
+<% flagHome=0;%>
+<% flagHomestudent=0;%>
+<%flagViewAttn=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/styleTeacher.css">
+    <link rel="stylesheet" href="/css/styleStudent.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content-home">
+        <div class="student-nav-heading">
+            <h1>NAME : <%#student.studentName%></h1>
+            <h1>BRANCH : <%#student.Branch%> <%#student.Section%></h1>
+        </div>
+        <div class="options-box">
+            <div class="options-list">
+                <a href="http://localhost:8080/student/announcement">Announcement</a>
+            </div>
+            <div class="options-list">
+                <a href="http://localhost:8080/student/allstudent/<%#student.userid%>">View all student</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/student/<%#student.userid%>/attendence">Attendence</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/student/<%#student.userid%>/information">Information</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/student/student_list" download="student list">Download Syllabus</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/student/result">Result</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/student/<%#student.userid%>/updatepassword">Change Password</a>
+            </div>
+
+            <div class="options-list">
+                <a href="http://localhost:8080/">Log Out</a>
+            </div>
+        </div>
+    </div>  
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<% flag=1;%> 
+<% flagHome=1;%>
+<% flagHomestudent=0;%> 
+<%flagViewAttn=0;%>
+<%- include("../includes/head.ejs") %>
+<head>
+  <link rel="stylesheet" href="/css/teacher-info.css" />
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content">
+        <div class="heading">
+            <h2 style="font-size: 50px;">Teacher Name :<%=teacherinfo.teacherName%></h2>
+        </div>
+        <div class="faculty-info-box">
+            <div class="tr-info">
+                <div class="mb-2">
+                    <h2>Username : <%=teacherinfo.username %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Date Of Birth : <%=teacherinfo.dob.toString().split(" ").splice(1,3).join(" ") %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Gender : <%=teacherinfo.gender %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Email : <%=teacherinfo.temail %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Qualification : <%=teacherinfo.qualification %></h2>
+                </div>
+                <div class="mb-2 ">
+                    <h2>Contact : <%=teacherinfo.tcontact %></h2>
+                </div>
+                <div class="mb-2">
+                    <h2>Address : <%=teacherinfo.taddress %></h2>
+                </div>
+                <div class="mb-2">
+                    <div class="btn-box">
+                        <form action="http://localhost:8080/teacher/<%=teacherinfo._id%>/information/edit" method="get">
+                            <button type="submit" class="btn">Edit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="photo-box">
+                    <div class="photo"></div>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

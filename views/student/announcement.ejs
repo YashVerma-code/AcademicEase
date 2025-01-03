@@ -1,0 +1,40 @@
+<% flag=1;%>
+<% flagHome=0;%>
+<% flagHomestudent=1;%>
+<%flagViewAttn=0;%>
+
+
+<%- include("../includes/head.ejs") %>
+<head>
+  <link rel="stylesheet" href="/css/style_announcement.css" />
+</head>
+<body>
+  <%- include("../includes/flash.ejs")%>
+  <div class="body-content">
+    <div class="heading">
+      <h2>ANNOUNCEMENT</h2>
+    </div>
+    <div class="all-announcement">
+      <table class="table" id="myTable" style="color: white" border="black">
+        <thead>
+          <tr>
+            <th class="sno-col" >SNo</th>
+            <th class="date-col">Date of assign</th>
+            <th >Announcement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let i=1;%>
+          <% for(let msg of announcements){%>
+        <tr>
+          <td style="text-align: center;"><%=i%></td>
+          <td style="text-align: center;"><%=new Date(msg.date).toDateString() %></td>
+          <td class="announc-col"><%=msg.announcement%></td>
+        </tr>
+        <%i++;%>
+        <% }%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

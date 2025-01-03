@@ -1,0 +1,68 @@
+<% flag=1;%>
+<% flagHome=1;%>
+<%flagViewAttn=0;%>
+<% flagHomestudent=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/style_all_std.css" />
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="student-info-box">
+        <form action="http://localhost:8080/teacher/attendence/attendence_sheet" class="flex-box" method="post">
+          
+          <table >
+            <tr>
+              <th>Semester</th>
+              <th>Branch</th>
+              <th>Section</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="select-box">
+                        <select name="semester" required>
+                            <option value="none">Select Semester</option>
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                            <option value="3">3rd</option>
+                            <option value="4">4th</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="select-box">
+                        <select name="branch" required>
+                            <option value="none">Select Branch</option>
+                            <option value="CSE">CSE</option>
+                            <option value="AIML">AI ML</option>
+                            <option value="DSA">DSA</option>
+                            <option value="HCIGT">HCIGT</option>
+                            <option value="ECE">ECE</option>
+                        </select>
+                    </div>
+                </td>
+                <td >
+                    <div class="select-box">
+                        <select name="section" required >
+                            <option value="none">Select Section</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background-color: transparent;border: none;">
+                    <div class="btn-box">
+                        <button type="submit">Search</button>
+                    </div>
+                </td>
+            </tr>
+          </table>
+        </form>
+        </div>
+</body>
+</html>

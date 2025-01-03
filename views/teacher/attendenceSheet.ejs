@@ -1,0 +1,65 @@
+<% flag=1;%>
+<% flagHome=1;%>
+<%flagViewAttn=1;%>
+<% flagHomestudent=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/style_attn_sheet.css" />
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content">
+        <div class="heading">
+            <h2>ADD ATTENDENCE Of STUDENTS</h2>
+        </div>
+        <div class="form-box">
+            <form action="/teacher/attendence/attendence_sheet/addAttendence" method="post">
+                <div class="attn-date">
+                    <div class="date-box">DATE :</div>
+                    <div class="inp-date-box">
+                        <input type="date" name="attndate" id="attndate" required>
+                    </div>
+                </div>
+                <div class="attendence-box">
+                    <table class="table" id="myTable" border="black">
+                        <thead>
+                            <tr>
+                                <th class="sno-col">SNO</th>
+                                <th class="name-col">Name</th>
+                                <th class="id-col">ID</th>
+                                <th class="attn-status-col">Attendence</th>
+                                <th class="photo-col">Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% allstudent.forEach((stdn, index) => { %>  
+                            <tr>
+                                <th><%=index+1%></th>
+                                <td ><%=stdn.studentName %></td>
+                                <td ><%=stdn.userid %></td>
+                                <td >
+                                    <label style="color:red;font-size:20px">
+                                        <input type="radio" name="attn[<%= stdn.userid %>]" value="absent" required class="abs" /> Absent
+                                    </label>
+                                    &nbsp;&nbsp;
+                                    <label style="color:green;font-size:20px">
+                                        <input type="radio" name="attn[<%= stdn.userid %>]" value="present" required class="pres" /> Present
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class='photo'></div>
+                                </td>
+                            </tr>
+                          <%})%>
+                        </tbody>
+                    </table>
+                    <div class="submit-btn">
+                        <button class="attn-btn" type="submit">Add Attendence</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>    
+</html>

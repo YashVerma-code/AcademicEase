@@ -1,0 +1,39 @@
+<% flag=1;%>
+<% flagHome=1;%>
+<%flagViewAttn=0;%>
+<% flagHomestudent=0;%>
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/style_attn_view_date.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content">
+        <div class="heading">
+            <h2>Date : <%= %>23/08/2023</h2>
+        </div>
+        <div class="table-box" style="margin-bottom: 30px;">
+            <table border="black">
+                <thead>
+                    <tr>
+                        <th class="sno-col">SNO</th>
+                        <th class="name-col">Name</th>
+                        <th class="id-col">ID</th>
+                        <th class="attnd-status-col">Attendence Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0;i<15;i++){%>
+                    <tr>
+                        <td>1</td>
+                        <td>Yash Verma</td>
+                        <td>BT23CSE019</td>
+                        <td class="abs">Absent</td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

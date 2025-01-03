@@ -1,0 +1,136 @@
+.flex-box{
+    height: 75%;
+    width: 100%;
+    /* border: 1px solid black; */
+    /* background:white; */
+    position: relative;
+    top:17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-heading{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-box h1{
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    color:#FF4742;
+    font-size: 45px;
+    font-weight:900;
+    word-spacing:5px;
+    text-shadow: 1px 1px rgb(255, 249, 249);
+}
+.table-box{
+    min-height: 80%;
+    width: 90%;
+    overflow-y: scroll;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #ffffffa7;
+}
+.table-box::-webkit-scrollbar{
+    width: 12px;
+}
+.table-box::-webkit-scrollbar-thumb{
+    background:#FF4742;  
+    border-radius: 20px;   /*    roundness of the scroll thumb*/
+}
+.table-box::-webkit-scrollbar-track{
+    background: grey;
+    border-radius: 20px;   /*    roundness of the scroll thumb*/
+    /* border: 3px solid orange;  creates padding around scroll thumb */
+}
+
+table{
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    /* background-color: #ffffffa7; */
+}
+thead{
+    height: 60px;
+    width: 100%;
+    position:sticky;
+}
+thead th{
+    position:sticky;
+    font-size: 25px;
+    color: rgb(28, 81, 173);
+    text-align: center;
+    text-shadow: 2px 2px grey;
+    letter-spacing: 2px;
+    background-color: #fff;
+}
+tbody{
+    width: 100%;
+    height: 80%;
+    overflow: scroll;
+}
+tbody tr{
+    width: 100%;
+    height: 50px;
+}
+tbody tr td{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+.name{
+    padding-left: 20px;
+    text-align: left;
+}
+.id-col{
+    width: 20%;
+}
+.name-col{
+    width: 35%;
+}
+.btn-col{
+    width: 15%;
+}
+.photo{
+    height: 90%;
+    width: 100%;
+    background-image: url("/img/male.avif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: #fff; */
+}
+.del-btn-box{
+    width: 100%;
+    height: 100%;
+}
+.del-btn-box form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.del-btn{
+    height: 80%;
+    width: 55%;
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    font-size: 17px;
+    cursor: pointer;
+    outline: 0;
+    padding: 0 20px;
+    border: 0;
+    transition: box-shadow .2s;
+}
+
+.del-btn:hover {
+    box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}

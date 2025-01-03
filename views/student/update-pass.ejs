@@ -1,0 +1,45 @@
+<% flag=1;%>
+<% flagHome=0;%>
+<% flagHomestudent=1;%>
+<%flagViewAttn=0;%>
+
+<%- include("../includes/head.ejs") %>
+<head>
+    <link rel="stylesheet" href="/css/style_update_pass.css">
+</head>
+<body>
+    <%- include("../includes/flash.ejs")%>
+    <div class="body-content-pass">
+        <div class="heading">
+            <h2 >CHANGE PASSWORD</h2>
+        </div>
+        <div class="register-container">
+            <form action="http://localhost:8080/student/<%=student.userid%>/updatepassword/?_method=PUT" method="post">
+                <div class="mb-2">
+                    <label for="old-pass" ><span>Old Password :</span></label>
+                    <div class="input-box">
+                        <input type="password" class="inp-len" id="oldPass" name="oldPass" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="new-pass" ><span>New Password :</span></label>
+                    <div class="input-box">
+                        <input type="password" class="inp-len" id="newPass" name="newPass" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="new-cpass"><span>Confirm New Password :</span></label>
+                    <div class="input-box">
+                        <input type="password" class="inp-len" id="newCpass" name="newCpass" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="mb-btn-2">
+                    <div class="btn-box">
+                        <button type="submit" class="btn-change-pass">Change Password</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>    
